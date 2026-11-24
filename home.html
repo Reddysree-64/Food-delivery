@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- THEME SELECTOR -->
+<div class="theme-picker">
+    <label for="themeSelector">🎨 Theme</label>
+
+    <select id="themeSelector">
+        <option value="orange">Royal Orange</option>
+        <option value="gold">Black & Gold</option>
+        <option value="green">Fresh Green</option>
+        <option value="blue">Ocean Blue</option>
+        <option value="red">Cherry Red</option>
+        <option value="pink">Rose Pink</option>
+        <option value="brown">Coffee Brown</option>
+        <option value="teal">Teal Elegance</option>
+    </select>
+
+    <!-- LIGHT / DARK MODE -->
+<div class="mode-picker">
+    <button type="button" id="modeToggle">
+        🌙 Dark Mode
+    </button>
+</div>
+</div>
+<!-- END THEME SELECTOR -->
+</header>
+</head>
+
+<body>
+
+
+<!-- CINEMATIC HERO SECTION -->
+<section class="hero-section" id="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-subtitle">A WORLD OF EXQUISITE TASTE</p>
+
+        <h1>
+            Taste The <span>Extraordinary.</span>
+        </h1>
+
+        <p class="hero-description">
+            Discover unforgettable flavours, crafted with passion
+            and delivered straight to your doorstep.
+        </p>
+
+        <a href="#foodMenu" class="hero-button">
+            EXPLORE OUR MENU ↓
+        </a>
+
+    </div>
+
+    <div class="scroll-indicator">
+        SCROLL TO DISCOVER
+        <span>↓</span>
+    </div>
+
+</section>
+<!-- END CINEMATIC HERO -->
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <h1>🍔 Foodie</h1>
+
+        <div class="nav-right">
+
+            <span id="welcomeUser">Welcome!</span>
+
+            <button onclick="logout()" class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h2>Delicious Food, Delivered Fresh!</h2>
+
+        <p>Choose your favourite food and order now.</p>
+
+    </section>
+
+
+    <!-- FOOD MENU -->
+
+    <section class="menu-section">
+
+      <h2 id="foodMenuTitle">🍕 Our Food Menu</h2>
+
+        <div id="foodMenu" class="food-grid">
+
+            <!-- Food cards are displayed using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- CART SECTION -->
+
+    <section class="cart-section">
+
+        <h2 class="section-title">
+            🛒 My Cart
+        </h2>
+
+        <div id="cartItems">
+
+            <p>Your cart is empty. Add some delicious food!</p>
+
+        </div>
+
+        <h3 id="cartTotal">
+            Total: ₹0
+        </h3>
+
+        <h3>📍 Delivery Address</h3>
+
+        <textarea
+            id="deliveryAddress"
+            placeholder="Enter your delivery address"
+            rows="3">
+        </textarea>
+
+        <button onclick="placeOrder()" class="main-btn">
+            Place Order
+        </button>
+
+        <p id="orderMessage" class="message"></p>
+
+    </section>
+
+
+    <!-- MY ORDERS SECTION -->
+
+    <section class="orders-section">
+
+        <h2 class="section-title">
+            📦 My Orders
+        </h2>
+
+        <div class="table-container">
+
+            <table class="orders-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Food Items</th>
+                        <th>Total Amount</th>
+                        <th>Delivery Address</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="myOrders">
+
+                    <tr>
+                        <td colspan="6">
+                            You have not placed any orders yet!
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>© 2026 Foodie. Made with ❤️ for food lovers.</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
